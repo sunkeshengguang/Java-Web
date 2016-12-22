@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.model.User" table="user" catalog="recruitmentsystem">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="recruitment" class="com.model.Recruitment" fetch="select">
+            <column name="job_id" />
+        </many-to-one>
+        <property name="userUsername" type="java.lang.String">
+            <column name="user_username" />
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="user_password" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="user_name" />
+        </property>
+    </class>
+</hibernate-mapping>

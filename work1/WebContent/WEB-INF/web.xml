@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <display-name>
+	work1</display-name>
+  <welcome-file-list>
+    <welcome-file>userLogin.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Login Servlet</servlet-name>
+    <servlet-class>com.controller.UserLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login Servlet</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Register Servlet</servlet-name>
+    <servlet-class>com.controller.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register Servlet</servlet-name>
+    <url-pattern>/Register.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Add Servlet</servlet-name>
+    <servlet-class>com.controller.AddRecruitment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Add Servlet</servlet-name>
+    <url-pattern>/AddRecruitment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UserPersonal Servlet</servlet-name>
+    <servlet-class>com.controller.UserPersonal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserPersonal Servlet</servlet-name>
+    <url-pattern>/UserPersonal</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminPersonal Servlet</servlet-name>
+    <servlet-class>com.controller.AdminPersonal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminPersonal Servlet</servlet-name>
+    <url-pattern>/AdminPersonal</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminLogin</servlet-name>
+    <servlet-class>com.controller.AdminLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLogin</servlet-name>
+    <url-pattern>/AdminLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteRecruitment</display-name>
+    <servlet-name>DeleteRecruitment</servlet-name>
+    <servlet-class>com.controller.DeleteRecruitment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteRecruitment</servlet-name>
+    <url-pattern>/DeleteRecruitment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ApplyJob</display-name>
+    <servlet-name>ApplyJob</servlet-name>
+    <servlet-class>com.controller.ApplyJob</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ApplyJob</servlet-name>
+    <url-pattern>/ApplyJob</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CandidateInfo</servlet-name>
+    <servlet-class>com.controller.CandidateInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CandidateInfo</servlet-name>
+    <url-pattern>/CandidateInfo</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>modifyUser</servlet-name>
+    <servlet-class>com.controller.ModifyUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifyUser</servlet-name>
+    <url-pattern>/modifyUser</url-pattern>
+  </servlet-mapping>
+  <session-config>
+  <session-timeout>1</session-timeout>
+  </session-config>
+</web-app>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.model.Recruitment" table="recruitment" catalog="recruitmentsystem">
+        <id name="jobId" type="java.lang.Integer">
+            <column name="job_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="company" class="com.model.Company" fetch="select">
+            <column name="company_id" />
+        </many-to-one>
+        <property name="jobName" type="java.lang.String">
+            <column name="job_name" />
+        </property>
+        <property name="jobDuty" type="java.lang.String">
+            <column name="job_duty" />
+        </property>
+        <property name="jobRequire" type="java.lang.String">
+            <column name="job_require" />
+        </property>
+        <property name="jobIsavailable" type="java.lang.Integer">
+            <column name="job_isavailable" />
+        </property>
+        <set name="users" inverse="true">
+            <key>
+                <column name="job_id" />
+            </key>
+            <one-to-many class="com.model.User" />
+        </set>
+    </class>
+</hibernate-mapping>

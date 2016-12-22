@@ -1,0 +1,48 @@
+body{
+text-align:center;
+background:url('../images/bg.png') left top no-repeat;
+background-attachment: fixed;
+}
+.clearfix{
+padding-top:10px;
+}
+
+*{
+margin:0;
+padding:0;
+}
+.wrapper{
+width:960px;
+margin:0 15%;
+}
+.header{
+display:block; 
+width:960px;
+height:100px;
+margin-top:50px;
+background:url('../images/banner.png') left top no-repeat;
+}
+.main{
+display:block;
+width:960px;
+height:250px;
+background:url('../images/indexMain.png') left top no-repeat;
+}
+.left{
+display:inline;
+float:left;
+width:330px;
+height:250px;
+}
+.right{
+display:inline;
+float:left;
+width:630px;
+height:250px;
+}
+.button{
+text-align:center;
+width:300px;
+height:30px;
+margin:10px 0 0 20px;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.model.Candidate" table="candidate" catalog="recruitmentsystem">
+        <id name="candidateId" type="java.lang.Integer">
+            <column name="candidate_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="company" class="com.model.Company" fetch="select">
+            <column name="company_id" />
+        </many-to-one>
+        <property name="candidateName" type="java.lang.String">
+            <column name="candidate_name" />
+        </property>
+        <property name="candidateResume" type="java.lang.String">
+            <column name="candidate_resume" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

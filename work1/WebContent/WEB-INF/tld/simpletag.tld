@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd" >
+<taglib>
+	<tlib-version>tlib-version</tlib-version>
+	<jsp-version>jsp-version</jsp-version>
+	<short-name>short-name</short-name>
+	<uri>message</uri>
+	<tag>
+		<name>errorMessage</name>
+		<tag-class>com.simpleTag.SimpleTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>error_message</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

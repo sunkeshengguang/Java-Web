@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.model.Admin" table="admin" catalog="recruitmentsystem">
+        <id name="adminId" type="java.lang.Integer">
+            <column name="admin_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="adminUsername" type="java.lang.String">
+            <column name="admin_username" />
+        </property>
+        <property name="adminPassword" type="java.lang.String">
+            <column name="admin_password" />
+        </property>
+        <property name="adminName" type="java.lang.String">
+            <column name="admin_name" />
+        </property>
+    </class>
+</hibernate-mapping>

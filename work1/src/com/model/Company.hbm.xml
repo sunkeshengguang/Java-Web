@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.model.Company" table="company" catalog="recruitmentsystem">
+        <id name="companyId" type="java.lang.Integer">
+            <column name="company_id" />
+            <generator class="identity" />
+        </id>
+        <property name="companyName" type="java.lang.String">
+            <column name="company_name" />
+        </property>
+        <property name="companyIntroduction" type="java.lang.String">
+            <column name="company_introduction" length="65535" />
+        </property>
+        <property name="companyAddress" type="java.lang.String">
+            <column name="company_address" />
+        </property>
+        <property name="companyContact" type="java.lang.String">
+            <column name="company_contact" />
+        </property>
+        <property name="jobName" type="java.lang.String">
+            <column name="job_name" />
+        </property>
+        <property name="jobDuty" type="java.lang.String">
+            <column name="job_duty" length="65535" />
+        </property>
+        <property name="jobRequire" type="java.lang.String">
+            <column name="job_require" />
+        </property>
+        <property name="jobIsavailable" type="java.lang.Integer">
+            <column name="job_isavailable" />
+        </property>
+        <set name="candidates" inverse="true">
+            <key>
+                <column name="company_id" />
+            </key>
+            <one-to-many class="com.model.Candidate" />
+        </set>
+
+    </class>
+</hibernate-mapping>
